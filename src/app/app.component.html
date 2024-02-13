@@ -1,0 +1,55 @@
+<div class="home">
+  <div class="inner-home" *ngIf="!loveMessageVisible">
+    <div class="img">
+      <img src="../assets/pic.svg" alt="Image Unavailable" />
+    </div>
+    <div class="head">
+      <h1>BE MY VALENTINE</h1>
+    </div>
+    <div class="body">
+      <h2>
+        Since you've been dodging my asking about if you wanted me to ask or
+        not, you have several options to choose from:
+      </h2>
+    </div>
+    <div class="buttons">
+      <button
+        (click)="
+          onButtonClick(
+            'Yes, this is cuter than a baby bunny riding a tiny bicycle. Count me in!'
+          )
+        "
+      >
+        Yes, this is cuter than a baby bunny riding a tiny bicycle. Count me in!
+      </button>
+      <button (click)="onButtonClick('No, but I still want the flowers')">
+        No, but I still want the flowers
+      </button>
+      <button
+        (click)="
+          onButtonClick(
+            'Yes, but I hope you\'re not expecting me to share my chocolate stash'
+          )
+        "
+      >
+        Yes, but I hope you're not expecting me to share my chocolate stash
+      </button>
+      <button
+        (click)="
+          onButtonClick(
+            'Hard pass. I\'m already in a complicated relationship with my snooze button.'
+          )
+        "
+      >
+        Hard pass. I'm already in a complicated relationship with my snooze
+        button.
+      </button>
+    </div>
+  </div>
+  <div class="love" *ngIf="loveMessageVisible">
+    <div class="love-message">
+      <p>I Love You Idiot!</p>
+    </div>
+  </div>
+</div>
+
