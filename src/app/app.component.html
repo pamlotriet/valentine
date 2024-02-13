@@ -1,5 +1,5 @@
 <div class="home">
-  <div class="inner-home" *ngIf="!loveMessageVisible">
+  <div class="inner-home" *ngIf="!loveMessageVisibleYes && !loveMessageVisibleNo && !loveChoiceVisibleYes">
     <div class="img">
       <img src="../assets/pic.svg" alt="Image Unavailable" />
     </div>
@@ -46,10 +46,23 @@
       </button>
     </div>
   </div>
-  <div class="love" *ngIf="loveMessageVisible">
+  <div class="love" *ngIf="loveMessageVisibleYes">
     <div class="love-message">
-      <p>I Love You Idiot!</p>
+      <p>{{loveMessage}}</p>
+      <button (click)="sendEmail('I want to go for a movie!')">I want to go for a movie!</button>
+      <button (click)="sendEmail('I want to have dinner!')">I want to have dinner!</button>
+      <button (click)="sendEmail('I want both!')">I want both!</button>
+      <button (click)="sendEmail('I want a home-cooked meal!')">I want a home-cooked meal!</button>
+      
     </div>
+  </div>
+  <div class="love" *ngIf="loveMessageVisibleNo">
+    <div class="love-message">
+      <p>{{loveMessage}}</p>
+    </div>
+  </div>
+  <div class="option" *ngIf="loveChoiceVisibleYes">
+    <p>{{message}}</p>
   </div>
 </div>
 
