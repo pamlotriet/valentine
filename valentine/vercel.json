@@ -1,0 +1,10 @@
+{
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
+  "builds": [
+    {
+      "src": "dist/browser/**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [{ "src": "/.*", "dest": "/index.html" }]
+}
