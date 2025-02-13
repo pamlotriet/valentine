@@ -1,26 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
+:root {
   --color-pink-bg: #fcaab0;
   --color-tahiti: #3ab7bf;
   --color-bermuda: #78dcca;
 }
 
-@layer components {
-  button {
-    background-color: var(--color-pink-bg);
-    color: white;
-    animation: bounceCute 2s infinite ease-in-out;
-  }
+button {
+  background-color: var(--color-pink-bg);
+  color: white;
+  animation: bounceCute 2s infinite ease-in-out;
+}
+.valentine-text {
+  animation: bounceCute 2s infinite ease-in-out;
+}
 
-  .valentine-text {
-    animation: bounceCute 2s infinite ease-in-out;
-  }
-
-  .valentine-image {
-    animation: hop 1.5s infinite ease-in-out;
-  }
+.valentine-image {
+  animation: hop 1.5s infinite ease-in-out;
 }
 
 @keyframes bounceCute {
