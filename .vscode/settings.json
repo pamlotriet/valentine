@@ -1,5 +1,5 @@
 {
   "appService.zipIgnorePattern": ["node_modules{,/**}", ".vscode{,/**}"],
   "appService.defaultWebAppToDeploy": "/subscriptions/7ded1d1c-b497-4ad0-9d21-31760f46f0fb/resourceGroups/nika-valentine_group/providers/Microsoft.Web/sites/nika-valentine",
-  "appService.deploySubpath": "valentine/dist/browser"
+  "appService.deploySubpath": "/valentine/dist/browser"
 }
