@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-valentine',
@@ -6,12 +6,16 @@ import { Component } from '@angular/core';
   imports: [],
   templateUrl: './valentine.component.html',
 })
-export class ValentineComponent {
+export class ValentineComponent implements OnInit {
   sendWhatsApp() {
-    const phoneNumber = '+27684233681'; // Replace with the recipient's phone number
-    const message = encodeURIComponent('Yes of course! I love you'); // Custom message
+    const phoneNumber = '+27684233681';
+    const message = encodeURIComponent('Yes of course! I love you');
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
     window.open(whatsappUrl, '_blank');
+  }
+
+  ngOnInit() {
+    window.scrollTo(0, 0);
   }
 }

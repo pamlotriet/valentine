@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,9 +7,14 @@ import { Router } from '@angular/router';
   imports: [],
   templateUrl: './home.component.html',
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   router = inject(Router);
+
   navigate() {
     this.router.navigateByUrl('heart');
+  }
+
+  ngOnInit() {
+    window.scrollTo(0, 0); 
   }
 }
